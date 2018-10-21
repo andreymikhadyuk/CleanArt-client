@@ -1,0 +1,13 @@
+@import '~reset-css';
+
+body {
+  font-family: sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
