@@ -1,0 +1,15 @@
+@import '../../../consts/styles/colors';
+
+.button {
+  padding: 0.6em 1.5em;
+  color: $orangeColor;
+  background-color: $whiteColor;
+  border: 1px solid $orangeColor;
+  border-radius: 3px;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $orangeColor;
+    color: $whiteColor;
+  }
+}

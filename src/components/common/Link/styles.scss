@@ -1,0 +1,12 @@
+@import '../../../consts/styles/colors';
+
+.link {
+  text-decoration: none;
+  color: #000;
+  transition: 0.2s;
+  font-size: 0.95em;
+
+  &:hover {
+    color: $pinkColor;
+  }
+}

@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Header from 'containers/Header';
+import './styles.scss';
 
 const PageWrapper = ({ children }) => (
   <div className="page-wrapper">
     <div className="page-wrapper__content">
+      <Header />
       {children}
     </div>
   </div>
