@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from 'containers/Header';
+import Footer from 'components/Footer';
 import './styles.scss';
 
 const PageWrapper = ({ children }) => (
@@ -9,6 +10,7 @@ const PageWrapper = ({ children }) => (
       <Header />
       {children}
     </div>
+    <Footer />
   </div>
 );
 
