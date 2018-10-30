@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #dfe1d9;
+  box-sizing: border-box;
 }
 
 .header__wrapper {
@@ -24,9 +25,9 @@
 
 .header__login {
   padding: 0.5em 1em;
-  grid-column: 4;
+  grid-column: 5;
 }
 
 .header__registration {
-  grid-column: 5;
+  grid-column: 6;
 }
