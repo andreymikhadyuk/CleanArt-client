@@ -1,0 +1,11 @@
+.login-form {
+  width: 100%;
+}
+
+.login-form__title {
+  font-size: 1.5em;
+}
+
+.login-form__row + .login-form__row {
+  margin-top: 1.25em;
+}

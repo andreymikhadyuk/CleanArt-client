@@ -1,6 +1,6 @@
 import React from 'react';
-import './styles.scss';
 import { Button, Link } from 'components/common';
+import './styles.scss';
 
 const Header = () => (
   <header className="header">

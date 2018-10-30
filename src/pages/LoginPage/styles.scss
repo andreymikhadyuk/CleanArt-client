@@ -1,0 +1,27 @@
+@import '../../consts/styles/colors';
+@import '../../consts/styles/sizes';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.login-page {
+  width: $largeWidth;
+  display: flex;
+  height: 100%;
+}
+
+.login-page__login-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: $lightPinkColor;
+}
+
+.login-page__right {
+  width: 100%;
+  flex-grow: 1;
+}

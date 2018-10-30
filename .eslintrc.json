@@ -30,6 +30,7 @@
       "ImportDeclaration": { "consistent": true },
       "ExportDeclaration": { "consistent": true }
     }],
+    "react/button-has-type": 0,
     "import/prefer-default-export": 0,
     "import/no-named-as-default": 0,
     "import/no-named-as-default-member": 0,

@@ -1,0 +1,37 @@
+@import '../../../consts/styles/colors';
+
+.text-input {
+  width: 100%;
+}
+
+.text-input__input {
+  width: 100%;
+  outline: 0 none;
+  background-color: $whiteColor;
+  padding: 0.7em 0.625em;
+  border-radius: 3px;
+  border: 1px solid $greyColor;
+  font-size: 1em;
+  transition: 0.2s ease;
+  box-sizing: border-box;
+
+  &:focus {
+    border: 1px solid $blueColor;
+  }
+}
+
+.text-input__details {
+  display: block;
+  margin-top: 0.35em;
+  font-size: 0.9em;
+}
+
+.text-input.text-input_error {
+  .text-input__input {
+    border-color: $errorColor;
+  }
+
+  .text-input__details {
+    color: $errorColor;
+  }
+}
