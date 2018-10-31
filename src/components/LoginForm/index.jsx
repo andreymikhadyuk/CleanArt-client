@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TextInput, Button } from 'components/common';
 import './styles.scss';
 
-const LoginForm = ({ login, password, handleChange }) => {
+const LoginForm = ({ login, password, handleChange, handleSubmit }) => {
   const props = {
     login: {
       name: 'login',
@@ -24,6 +24,7 @@ const LoginForm = ({ login, password, handleChange }) => {
       text: 'Войти',
       className: 'login-form__row',
       emphasize: true,
+      onClick: handleSubmit,
     },
   };
   return (
@@ -40,6 +41,7 @@ LoginForm.propTypes = {
   login: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default LoginForm;

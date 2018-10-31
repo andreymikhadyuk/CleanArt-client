@@ -16,12 +16,17 @@ class LoginFormContainer extends Component {
     this.setState({ [name]: value });
   };
 
+  handleSubmit = () => {
+    console.log(this.state.login, this.state.password);
+  };
+
   render() {
     return (
       <LoginForm
         login={this.state.login}
         password={this.state.password}
         handleChange={this.handleChange}
+        handleSubmit={this.handleSubmit}
       />
     );
   }

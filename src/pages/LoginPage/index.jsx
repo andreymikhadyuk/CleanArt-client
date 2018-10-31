@@ -7,8 +7,10 @@ const LoginPage = () => (
   <PageWrapper>
     <div className="wrapper">
       <div className="login-page">
-        <div className="login-page__login-form">
-          <LoginForm />
+        <div className="login-page__left">
+          <div className="login-page__login-form">
+            <LoginForm />
+          </div>
         </div>
         <div className="login-page__right">
           Right

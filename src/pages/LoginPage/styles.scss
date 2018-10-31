@@ -1,6 +1,8 @@
 @import '../../consts/styles/colors';
 @import '../../consts/styles/sizes';
 
+$partContentPadding: 5em 0;
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -13,7 +15,7 @@
   height: 100%;
 }
 
-.login-page__login-form {
+.login-page__left {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -21,7 +23,14 @@
   background-color: $lightPinkColor;
 }
 
+.login-page__login-form {
+  width: 19em;
+  padding: $partContentPadding;
+  margin: 0 auto;
+}
+
 .login-page__right {
   width: 100%;
   flex-grow: 1;
+  background-color: $whiteColor;
 }
