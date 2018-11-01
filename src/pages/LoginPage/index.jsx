@@ -24,6 +24,7 @@ const LoginPage = () => (
             </span>
             <Button
               text="Зарегистрироваться"
+              url="/"
               className="login-page__not-registered__registration"
             />
           </div>

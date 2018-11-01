@@ -10,7 +10,11 @@ const Header = () => (
       </div>
       <Link text="Войти" url="/login" className="header__login" />
       <div className="header__registration">
-        <Button text="Зарегистрироваться" small />
+        <Button
+          text="Зарегистрироваться"
+          url="/"
+          small
+        />
       </div>
     </div>
   </header>

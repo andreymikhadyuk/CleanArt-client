@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import './styles.scss';
 
-const Button = ({ type, text, emphasize, className, onClick, small }) => {
+const Button = ({ type, text, emphasize, className, onClick, small, url }) => {
   const props = {
     className: classNames('button', {
       button_emphasize: emphasize,
@@ -13,11 +14,15 @@ const Button = ({ type, text, emphasize, className, onClick, small }) => {
     onClick,
   };
 
-  return (
+  const buttonEl = (
     <button {...props}>
       {text}
     </button>
   );
+
+  return url
+    ? <Link to={url} className="button__link">{buttonEl}</Link>
+    : buttonEl;
 };
 
 Button.propTypes = {
@@ -27,6 +32,7 @@ Button.propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func,
   small: PropTypes.bool,
+  url: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -36,6 +42,7 @@ Button.defaultProps = {
   className: '',
   onClick: null,
   small: false,
+  url: '',
 };
 
 export default Button;
