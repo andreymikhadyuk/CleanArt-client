@@ -1,0 +1,17 @@
+.icon-section {
+  display: flex;
+}
+
+.icon-section__icon {
+  width: 65px;
+  font-size: 3em;
+}
+
+.icon-section__content {
+  padding-left: 2em;
+}
+
+.icon-section__content_vertical-center {
+  display: flex;
+  align-items: center;
+}

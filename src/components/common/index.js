@@ -3,6 +3,7 @@ import Link from './Link';
 import TextInput from './TextInput';
 import Tabs from './Tabs';
 import TabPane from './Tabs/TabPane';
+import IconSection from './IconSection';
 
 export {
   Button,
@@ -10,4 +11,5 @@ export {
   TextInput,
   Tabs,
   TabPane,
+  IconSection,
 };
