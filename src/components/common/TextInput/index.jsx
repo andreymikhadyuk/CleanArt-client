@@ -4,8 +4,16 @@ import classNames from 'classnames';
 import './styles.scss';
 
 const TextInput = ({ type, name, placeholder, value, onChange, error, className }) => {
+  const styles = {
+    block: classNames('text-input', {
+      'text-input_error': error,
+    }, className),
+    input: 'text-input__input',
+    details: 'text-input__details',
+  };
+
   const props = {
-    className: 'text-input__input',
+    className: styles.input,
     type,
     name,
     placeholder,
@@ -13,20 +21,17 @@ const TextInput = ({ type, name, placeholder, value, onChange, error, className 
     readOnly: onChange === null,
     onChange,
   };
+
   return (
-    <div
-      className={classNames('text-input', {
-        'text-input_error': error,
-      }, className)}
-    >
+    <div className={styles.block}>
       <input {...props} />
-      {error && <span className="text-input__details">{error}</span>}
+      {error && <span className={styles.details}>{error}</span>}
     </div>
   );
 };
 
 TextInput.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.oneOf(['text', 'password', 'tel']),
   name: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.string,
