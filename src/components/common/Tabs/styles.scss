@@ -1,0 +1,58 @@
+$pinkColor: #d1103e;
+$grayColor: #424242;
+
+.tabs {
+  width: 100%
+}
+
+.tab-titles {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.tab-title {
+  width: 100%;
+  min-height: 3em;
+  box-sizing: border-box;
+  flex: 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $pinkColor;
+  color: white;
+  font-size: 0.9em;
+  border: 1px solid $pinkColor;
+  user-select: none;
+  transition: all 0.2s ease;
+
+  &:first-child {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+.tab-title_not-active {
+  cursor: pointer;
+  background-color: transparent;
+  border-color: $grayColor;
+  color: $grayColor;
+
+  &:hover {
+    border-color: $pinkColor;
+    color: $pinkColor;
+  }
+}
+
+.tab-title__text {
+  margin: 0 0.5em;
+  white-space: normal;
+  line-height: normal;
+  word-break: break-word;
+  word-wrap: break-word;
+}
