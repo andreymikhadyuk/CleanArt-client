@@ -8,6 +8,7 @@ class SignupFormContainer extends Component {
     this.state = {
       firstName: '',
       lastName: '',
+      companyName: '',
       email: '',
       phone: '',
     };
@@ -23,16 +24,23 @@ class SignupFormContainer extends Component {
     console.log(firstName, lastName, email, phone);
   };
 
+  handleCompanySubmit = () => {
+    const { companyName, email, phone } = this.state;
+    console.log(companyName, email, phone);
+  };
+
   render() {
-    const { firstName, lastName, email, phone } = this.state;
+    const { firstName, lastName, companyName, email, phone } = this.state;
 
     const props = {
       firstName,
       lastName,
+      companyName,
       email,
       phone,
       handleChange: this.handleChange,
       handlePrivateSpecialistSubmit: this.handlePrivateSpecialistSubmit,
+      handleCompanySubmit: this.handleCompanySubmit,
     };
 
     return (

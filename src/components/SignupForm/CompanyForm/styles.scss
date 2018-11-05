@@ -1,0 +1,7 @@
+.company-form {
+  width: 100%;
+}
+
+.company-form__row + .company-form__row {
+  margin-top: 1.25em;
+}
