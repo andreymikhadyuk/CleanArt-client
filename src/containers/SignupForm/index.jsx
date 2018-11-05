@@ -6,12 +6,37 @@ class SignupFormContainer extends Component {
     super(props);
 
     this.state = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
     };
   }
 
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
+
+  handlePrivateSpecialistSubmit = () => {
+    const { firstName, lastName, email, phone } = this.state;
+    console.log(firstName, lastName, email, phone);
+  };
+
   render() {
+    const { firstName, lastName, email, phone } = this.state;
+
+    const props = {
+      firstName,
+      lastName,
+      email,
+      phone,
+      handleChange: this.handleChange,
+      handlePrivateSpecialistSubmit: this.handlePrivateSpecialistSubmit,
+    };
+
     return (
-      <SignupForm />
+      <SignupForm {...props} />
     );
   }
 }

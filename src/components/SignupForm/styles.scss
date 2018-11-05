@@ -3,7 +3,9 @@
 }
 
 .signup-form__title {
+  display: block;
   font-size: 1.5em;
+  margin-bottom: 0.85em;
 }
 
 .signup-form__row + .signup-form__row {
