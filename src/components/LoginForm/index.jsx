@@ -27,6 +27,7 @@ const LoginForm = ({ login, password, handleChange, handleSubmit }) => {
       onClick: handleSubmit,
     },
   };
+
   return (
     <div className="login-form">
       <span className="login-form__title login-form__row">Войти</span>

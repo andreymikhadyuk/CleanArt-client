@@ -12,7 +12,7 @@ const Header = () => (
       <div className="header__registration">
         <Button
           text="Зарегистрироваться"
-          url="/"
+          url="/registration"
           small
         />
       </div>

@@ -1,0 +1,11 @@
+.signup-form {
+  width: 100%;
+}
+
+.signup-form__title {
+  font-size: 1.5em;
+}
+
+.signup-form__row + .signup-form__row {
+  margin-top: 1.25em;
+}

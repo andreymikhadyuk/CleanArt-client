@@ -1,0 +1,49 @@
+@import '../../consts/styles/colors';
+@import '../../consts/styles/sizes';
+
+@mixin columnContentIndents {
+  padding: 5em 0;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.signup-page {
+  width: $largeWidth;
+  display: flex;
+  height: 100%;
+}
+
+.signup-page__left {
+  width: 100%;
+  flex-grow: 1;
+  background-color: $whiteColor;
+}
+
+.signup-page__info {
+  @include columnContentIndents;
+  width: 25em;
+
+  .signup-page__info__title {
+    display: block;
+    margin-bottom: 1.3em;
+    font-size: 1.5em;
+  }
+}
+
+.signup-page__right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: $lightPinkColor;
+}
+
+.signup-page__signup-form {
+  @include columnContentIndents;
+  width: 19em;
+}
