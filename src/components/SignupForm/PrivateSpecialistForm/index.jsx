@@ -27,6 +27,7 @@ const PrivateSpecialistForm = ({ firstName, lastName, email, phone, handleChange
       className: 'private-specialist-form__row',
     },
     phone: {
+      type: 'tel',
       name: 'phone',
       placeholder: 'Телефон',
       value: phone,

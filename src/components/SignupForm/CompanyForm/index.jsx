@@ -20,6 +20,7 @@ const CompanyForm = ({ companyName, email, phone, handleChange, handleSubmit }) 
       className: 'company-form__row',
     },
     phone: {
+      type: 'tel',
       name: 'phone',
       placeholder: 'Телефон',
       value: phone,

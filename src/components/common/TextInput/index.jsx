@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import InputMask from 'react-input-mask';
 import './styles.scss';
+
+const PHONE_MASK = '+375 (99) 999-99-99';
 
 const TextInput = ({ type, name, placeholder, value, onChange, error, className }) => {
   const styles = {
@@ -22,9 +25,19 @@ const TextInput = ({ type, name, placeholder, value, onChange, error, className 
     onChange,
   };
 
+  let inputEl = <input {...props} />;
+
+  if (type === 'tel') {
+    inputEl = (
+      <InputMask mask={PHONE_MASK} {...props}>
+        {inputProps => <input {...inputProps} />}
+      </InputMask>
+    );
+  }
+
   return (
     <div className={styles.block}>
-      <input {...props} />
+      {inputEl}
       {error && <span className={styles.details}>{error}</span>}
     </div>
   );
