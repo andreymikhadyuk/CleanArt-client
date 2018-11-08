@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { HomePage, LoginPage, NotFoundPage, SignupPage } from '../pages';
 
 const App = () => (
@@ -7,7 +7,8 @@ const App = () => (
     <Route exact path="/" component={HomePage} />
     <Route path="/login" component={LoginPage} />
     <Route path="/registration" component={SignupPage} />
-    <Route component={NotFoundPage} />
+    <Route path="/not-found" component={NotFoundPage} />
+    <Redirect to="/not-found" />
   </Switch>
 );
 
