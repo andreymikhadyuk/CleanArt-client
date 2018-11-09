@@ -1,0 +1,51 @@
+$titleColor: #cdcdcd;
+$titleActiveColor: #070707;
+$completedItemHoverColor: #ffddcc;
+$completedColor: #1e905d;
+
+.task-creation-item {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5em 1.9em;
+  transition: all 0.2s ease;
+}
+
+.task-creation-item__title {
+  color: $titleColor;
+  font-size: 1.5em;
+}
+
+.task-creation-item__complete-icon {
+  color: $completedColor;
+}
+
+.task-creation-item_completed {
+  &:hover {
+    user-select: none;
+    cursor: pointer;
+    background-color: $completedItemHoverColor;
+  }
+
+  .task-creation-item__title {
+    display: flex;
+    color: $titleActiveColor;
+  }
+
+  .task-creation-item__complete-icon {
+    margin-left: 0.5em;
+  }
+
+  .task-creation-item__content {
+    margin-top: 15px;
+  }
+}
+
+.task-creation-item_active {
+  .task-creation-item__title {
+    color: $titleActiveColor;
+  }
+
+  .task-creation-item__content {
+    margin-top: 25px;
+  }
+}

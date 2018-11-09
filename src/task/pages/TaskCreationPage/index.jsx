@@ -1,6 +1,6 @@
 import React from 'react';
 import PageWrapper from 'containers/PageWrapper';
-import TaskCreationForm from '../../containers/TaskCreationForm';
+import TaskCreationForm from '../../containers/task-creation/TaskCreationForm';
 import './styles.scss';
 
 const TaskCreationPage = () => (

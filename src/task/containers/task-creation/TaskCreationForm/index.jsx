@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TaskCreationForm from '../../components/TaskCreationForm';
+import TaskCreationForm from '../../../components/task-creation/TaskCreationForm';
 
 class TaskCreationFormContainer extends Component {
   render() {

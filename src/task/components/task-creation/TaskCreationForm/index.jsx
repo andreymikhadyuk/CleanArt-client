@@ -1,9 +1,10 @@
 import React from 'react';
+import TaskCreationItem from '../TaskCreationItem';
 import './styles.scss';
 
 const TaskCreationForm = () => (
-  <div>
-    TaskCreationForm
+  <div className="task-creation-form">
+    <TaskCreationItem />
   </div>
 );
 
