@@ -1,0 +1,15 @@
+@import '../../../consts/styles/sizes';
+@import '../../../consts/styles/colors';
+
+.task-creation-page {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.task-creation-page__task-creation-form {
+  width: $largeWidth;
+  display: flex;
+  height: 100%;
+  background-color: $whiteColor;
+}
