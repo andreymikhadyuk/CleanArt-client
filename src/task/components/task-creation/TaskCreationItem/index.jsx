@@ -4,12 +4,12 @@ import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './styles.scss';
 
-const TaskCreationItem = ({ title, completed, active, children }) => {
+const TaskCreationItem = ({ title, completed, active, children, className }) => {
   const styles = {
     block: classNames('task-creation-item', {
       'task-creation-item_completed': completed,
       'task-creation-item_active': !completed && active,
-    }),
+    }, className),
     title: 'task-creation-item__title',
     content: 'task-creation-item__content',
     completeIcon: 'task-creation-item__complete-icon',
@@ -32,12 +32,14 @@ TaskCreationItem.propTypes = {
   completed: PropTypes.bool,
   active: PropTypes.bool,
   children: PropTypes.node,
+  className: PropTypes.node,
 };
 
 TaskCreationItem.defaultProps = {
   completed: false,
   active: false,
   children: 'Subtitle',
+  className: '',
 };
 
 export default TaskCreationItem;

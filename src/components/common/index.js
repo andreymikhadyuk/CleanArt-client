@@ -4,6 +4,7 @@ import TextInput from './TextInput';
 import Tabs from './Tabs';
 import TabPane from './Tabs/TabPane';
 import IconSection from './IconSection';
+import Select from './Select';
 
 export {
   Button,
@@ -12,4 +13,5 @@ export {
   Tabs,
   TabPane,
   IconSection,
+  Select,
 };

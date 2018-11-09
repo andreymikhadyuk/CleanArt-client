@@ -1,10 +1,10 @@
 import React from 'react';
-import TaskCreationItem from '../TaskCreationItem';
+import TaskServiceSelection from '../../../containers/task-creation/TaskServiceSelection';
 import './styles.scss';
 
 const TaskCreationForm = () => (
   <div className="task-creation-form">
-    <TaskCreationItem />
+    <TaskServiceSelection />
   </div>
 );
 
