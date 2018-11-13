@@ -12,20 +12,33 @@ class TaskServiceSelectionContainer extends Component {
 
     this.state = {
       selectedService: null,
+      isCompleted: false,
     };
   }
 
+  handleSectionClick = () => {
+    if (this.state.isCompleted) {
+      this.setState({ selectedService: null, isCompleted: false });
+    }
+  };
+
   handleChange = (selectedService) => {
-    this.setState({ selectedService });
+    const isCompleted = selectedService !== null;
+    this.setState({ selectedService, isCompleted });
   };
 
   render() {
+    const { selectedService, isCompleted } = this.state;
+    const props = {
+      services,
+      selectedService,
+      isCompleted,
+      onChange: this.handleChange,
+      onClick: this.handleSectionClick,
+    };
+
     return (
-      <TaskServiceSelection
-        services={services}
-        selectedService={this.state.selectedService}
-        onChange={this.handleChange}
-      />
+      <TaskServiceSelection {...props} />
     );
   }
 }
