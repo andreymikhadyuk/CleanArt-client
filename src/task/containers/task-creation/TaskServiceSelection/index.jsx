@@ -2,34 +2,25 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TaskServiceSelection from '../../../components/task-creation/TaskServiceSelection';
+import { selectService, cleanSelectedService } from '../../../actions/serviceSelection';
 
 class TaskServiceSelectionContainer extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      selectedService: null,
-      isCompleted: false,
-    };
-  }
-
   handleSectionClick = () => {
-    if (this.state.isCompleted) {
-      this.setState({ selectedService: null, isCompleted: false });
+    if (this.props.isCompleted) {
+      this.props.cleanSelectedService();
     }
   };
 
   handleChange = (selectedService) => {
-    const isCompleted = selectedService !== null;
-    this.setState({ selectedService, isCompleted });
+    const serviceId = selectedService ? selectedService.value : null;
+    this.props.selectService(serviceId);
   };
 
   render() {
-    const { services } = this.props;
-    const { selectedService, isCompleted } = this.state;
+    const { services, isCompleted, serviceId } = this.props;
     const props = {
       services,
-      selectedService,
+      selectedServiceId: serviceId,
       isCompleted,
       onChange: this.handleChange,
       onClick: this.handleSectionClick,
@@ -43,10 +34,24 @@ class TaskServiceSelectionContainer extends Component {
 
 TaskServiceSelectionContainer.propTypes = {
   services: PropTypes.array.isRequired,
+  isCompleted: PropTypes.bool.isRequired,
+  serviceId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  selectService: PropTypes.func.isRequired,
+  cleanSelectedService: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = ({ services }) => ({
+TaskServiceSelectionContainer.defaultProps = {
+  serviceId: null,
+};
+
+const mapStateToProps = ({ services, task: { serviceSelection } }) => ({
   services,
+  ...serviceSelection,
 });
 
-export default connect(mapStateToProps)(TaskServiceSelectionContainer);
+const mapDispatchToProps = {
+  selectService,
+  cleanSelectedService,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TaskServiceSelectionContainer);
