@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import TaskServiceSelection from '../../../components/task-creation/TaskServiceSelection';
-
-const services = [
-  { id: 1, name: 'Уборка квартир' },
-  { id: 2, name: 'Генеральная уборка' },
-];
 
 class TaskServiceSelectionContainer extends Component {
   constructor(props) {
@@ -28,6 +25,7 @@ class TaskServiceSelectionContainer extends Component {
   };
 
   render() {
+    const { services } = this.props;
     const { selectedService, isCompleted } = this.state;
     const props = {
       services,
@@ -43,4 +41,12 @@ class TaskServiceSelectionContainer extends Component {
   }
 }
 
-export default TaskServiceSelectionContainer;
+TaskServiceSelectionContainer.propTypes = {
+  services: PropTypes.array.isRequired,
+};
+
+const mapStateToProps = ({ services }) => ({
+  services,
+});
+
+export default connect(mapStateToProps)(TaskServiceSelectionContainer);
