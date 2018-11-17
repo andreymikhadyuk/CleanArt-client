@@ -5,6 +5,7 @@ import Tabs from './Tabs';
 import TabPane from './Tabs/TabPane';
 import IconSection from './IconSection';
 import Select from './Select';
+import Separator from './Separator';
 
 export {
   Button,
@@ -14,4 +15,5 @@ export {
   TabPane,
   IconSection,
   Select,
+  Separator,
 };

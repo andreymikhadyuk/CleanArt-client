@@ -1,0 +1,18 @@
+.task-details {
+  width: 100%;
+}
+
+.task-details__content {
+  width: 650px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-row-gap: 20px;
+}
+
+.task-details__form-label {
+  grid-column: 1;
+}
+
+.task-details__form-input {
+  grid-column: 2;
+}
