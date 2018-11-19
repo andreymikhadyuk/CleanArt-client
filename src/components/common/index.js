@@ -6,6 +6,7 @@ import TabPane from './Tabs/TabPane';
 import IconSection from './IconSection';
 import Select from './Select';
 import Separator from './Separator';
+import Textarea from './Textarea';
 
 export {
   Button,
@@ -16,4 +17,5 @@ export {
   IconSection,
   Select,
   Separator,
+  Textarea,
 };

@@ -1,0 +1,39 @@
+@import '../../../consts/styles/colors';
+
+.textarea {
+  width: 100%;
+}
+
+.textarea__input {
+  width: 100%;
+  min-height: 90px;
+  outline: 0 none;
+  background-color: $whiteColor;
+  padding: 0.7em 0.625em;
+  border-radius: 3px;
+  border: 1px solid $greyColor;
+  font-size: 1em;
+  transition: 0.2s ease;
+  box-sizing: border-box;
+  resize: vertical;
+
+  &:focus {
+    border: 1px solid $blueColor;
+  }
+}
+
+.textarea__details {
+  display: block;
+  margin-top: 0.35em;
+  font-size: 0.9em;
+}
+
+.textarea.textarea_error {
+  .textarea__input {
+    border-color: $errorColor;
+  }
+
+  .textarea__details {
+    color: $errorColor;
+  }
+}
