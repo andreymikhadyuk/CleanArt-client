@@ -1,3 +1,5 @@
+$pinkColor: #bc1038;
+
 .task-details {
   width: 100%;
 }
@@ -15,4 +17,21 @@
 
 .task-details__form-input {
   grid-column: 2;
+}
+
+.task-details__confidential-toggle {
+  color: $pinkColor;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::before {
+    content: '+ ';
+    font-weight: bold;
+  }
+}
+
+.task-details__confidential-input {
+  margin-top: 20px;
 }

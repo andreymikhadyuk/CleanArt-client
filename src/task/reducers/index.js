@@ -13,6 +13,8 @@ const initialState = {
   },
   details: {
     taskName: '',
+    taskDescription: '',
+    confidentialData: '',
   },
 };
 
