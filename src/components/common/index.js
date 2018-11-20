@@ -7,6 +7,7 @@ import IconSection from './IconSection';
 import Select from './Select';
 import Separator from './Separator';
 import Textarea from './Textarea';
+import Balloon from './Balloon';
 
 export {
   Button,
@@ -18,4 +19,5 @@ export {
   Select,
   Separator,
   Textarea,
+  Balloon,
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextInput, Textarea } from 'components/common';
+import { TextInput, Textarea, Balloon } from 'components/common';
 import TaskCreationItem from '../TaskCreationItem';
 import './styles.scss';
 
@@ -70,13 +70,15 @@ const TaskDetails = ({
           <Textarea {...props.taskDescription} />
         </div>
         <div className={styles.input}>
-          <span
-            className={styles.confidentialToggle}
-            onClick={toggleConfidentialDataInput}
-            role="presentation"
-          >
-            {TEXT.confidentialDataLabel}
-          </span>
+          <Balloon>
+            <span
+              className={styles.confidentialToggle}
+              onClick={toggleConfidentialDataInput}
+              role="presentation"
+            >
+              {TEXT.confidentialDataLabel}
+            </span>
+          </Balloon>
           {confidentialDataOpened && <Textarea {...props.confidentialData} />}
         </div>
       </div>
