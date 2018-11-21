@@ -1,0 +1,21 @@
+$pinkColor: #bc1038;
+
+.task-address {
+  width: 100%;
+}
+
+.task-address__content {
+  width: 650px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-row-gap: 20px;
+}
+
+.task-address__form-label {
+  grid-column: 1;
+  align-self: center;
+}
+
+.task-address__form-input {
+  grid-column: 2;
+}
